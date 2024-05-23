@@ -11,37 +11,38 @@ ai = random.randint(0, 2)
 # take in user input
 print("Enter your choice:")
 player = input()
+player = player.lower()
 
 # transform AI choice into strings
 if ai == 0:
-    ai = "Rock"
+    ai = "rock"
 elif ai == 1:
-    ai = "Paper"
+    ai = "paper"
 else:
-    ai = "Scissors"
+    ai = "scissors"
 
 # copy wining logic from two players mode
 if player == ai:
     print("SHOOT!")
     print("It is a tie!")
-elif player == "Rock":
-    if ai == "Paper":
+elif player == "rock":
+    if ai == "paper":
         print("SHOOT!")
         print("AI wins!")
-    elif ai == "Scissors":
+    elif ai == "scissors":
         print("SHOOT!")
         print("Player wins!")
-elif player == "Paper":
-    if ai == "Scissors":
+elif player == "paper":
+    if ai == "scissors":
         print("SHOOT!")
         print("AI wins!")
-    elif ai == "Rock":
+    elif ai == "rock":
         print("SHOOT!")
         print("Player wins!")
 else:
-    if ai == "Rock":
+    if ai == "rock":
         print("SHOOT!")
         print("AI wins!")
-    elif ai == "Paper":
+    elif ai == "paper":
         print("SHOOT!")
         print("Player wins!")
