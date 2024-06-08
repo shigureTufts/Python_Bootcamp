@@ -3,7 +3,7 @@ import random
 keep_playing = "y"
 while keep_playing == "y":
     answer = random.randint(1, 10)
-    user_guess = int(input("Guess a number between 1 to 10: "))
+    user_guess = 0
     while 1 > user_guess or 10 < user_guess:
         user_guess = int(input("Guess a number between 1 to 10: "))
     while user_guess != answer:
@@ -16,6 +16,7 @@ while keep_playing == "y":
         keep_playing = input("Do you want to keep playing? (y/n): ")
         keep_playing = keep_playing.lower()
         if keep_playing == "n":
+            print("Thanks for playing! Bye!")
             quit()
         elif keep_playing == "y":
             break
